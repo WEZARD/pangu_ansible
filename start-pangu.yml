@@ -1,0 +1,18 @@
+---
+- name: start zookeeper
+  hosts: pangu-zookeeper
+  sudo: True
+  tasks:
+    - supervisorctl: name=zookeeper state=started
+
+- name: start nimbus
+  hosts: pangu-nimbus
+  sudo: True
+  tasks:
+    - supervisorctl: name=nimbus state=started
+
+- name: start storm supervisor
+  hosts: pangu-storm
+  sudo: True
+  tasks:  
+    - supervisorctl: name=supervisor state=started

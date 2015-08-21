@@ -1,0 +1,10 @@
+[pangu-zookeeper]
+host-10-2-0-15 ansible_ssh_host=192.168.173.34 ipv4_addr=192.168.173.34 pangu_zookeeper_myid=1
+host-10-2-0-14 ansible_ssh_host=192.168.173.33 ipv4_addr=192.168.173.33 pangu_zookeeper_myid=2
+host-10-2-0-16 ansible_ssh_host=192.168.173.35 ipv4_addr=192.168.173.35 pangu_zookeeper_myid=3
+
+[pangu-storm]
+host-10-2-0-[14:16]
+
+[pangu-nimbus]
+host-10-2-0-14

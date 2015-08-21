@@ -1,0 +1,13 @@
+---
+- name: install redis
+  yum: name=redis state=present
+
+- service: name=redis state=started enabled=yes
+
+- name: add nimbus.conf
+  copy: src=nimbus.ini dest=/etc/supervisord.d/nimbus.ini
+  notify: Restart supervisord
+
+- name: Enable 8080
+  firewalld: port=8080/tcp permanent=true state=enabled
+  notify: Restart firewalld

@@ -1,0 +1,20 @@
+---
+- name: install OpenJDK
+  yum: name=java-1.7.0-openjdk-devel state=present
+
+- name: install libpcap
+  yum: name=libpcap state=present
+
+- name: copy jpcap
+  copy: src=jpcap-0.7-1.x86_64.rpm dest=/opt
+
+- name: install jpcap
+  yum: name=/opt/jpcap-0.7-1.x86_64.rpm state=present
+
+- name: install the EPEL repository
+  yum: name=epel-release state=present
+
+- name: install supervisor
+  yum: name=supervisor state=present
+
+- service: name=supervisord state=started enabled=true

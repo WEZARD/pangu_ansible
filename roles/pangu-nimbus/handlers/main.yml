@@ -1,0 +1,6 @@
+---
+- name: Restart supervisord
+  service: name=supervisord state=restarted enabled=true
+
+- name: Restart firewalld
+  service: name=firewalld state=restarted enabled=true
