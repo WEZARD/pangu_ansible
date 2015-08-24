@@ -13,6 +13,9 @@ License: Apache License, Version 2.0
 Group: Applications/Databases
 URL: http://netresearch.ics.uci.edu
 Source: http://netresearch.ics.uci.edu/kfujii/jpcap/jpcap-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
+Prefix: %{_prefix}
+Vendor: Apache Software Foundation
 Packager: zard <we_zard@163.com>
 Provides: storm
 
