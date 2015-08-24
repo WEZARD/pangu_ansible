@@ -17,10 +17,10 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-root
 Prefix: %{_prefix}
 Vendor: Apache Software Foundation
 Packager: zard <we_zard@163.com>
-Provides: storm
+Provides: jpcap
 
 %description
-jpcap
+Jpcap is an open source library for capturing and sending network packets from Java applications.
 
 %prep
 
