@@ -14,8 +14,8 @@ sudo make rpm   -- especially for storm, you should rename the apache-storm-0.9.
 
 #Installing
 
-ansible-playbook pangu-install.yml
+ansible-playbook install-pangu.yml
 
 #Running the services
 
-ansible-playbook pangu-start.yml
+ansible-playbook start-pangu.yml
