@@ -36,3 +36,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{_prefix}
 
+%changelog
+* Sat Aug 8 2015 zard <we_zard@163.com> - 0.7
+- initial release
