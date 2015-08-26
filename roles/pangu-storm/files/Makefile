@@ -9,19 +9,19 @@ PWD = $(shell pwd)
 
 rpm: $(SOURCE)
         @rpmbuild -v -bb \
-                        --define "_sourcedir $(PWD)" \
-                        --define "_rpmdir $(PWD)" \
-                        --define "_topdir $(TOPDIR)" \
-                        --define "name $(NAME)" \
-                        --define "version $(VERSION)" \
-                        --define "build_number $(BUILD_NUMBER)" \
-                        storm.spec
+			--define "_sourcedir $(PWD)" \
+			--define "_rpmdir $(PWD)" \
+			--define "_topdir $(TOPDIR)" \
+			--define "name $(NAME)" \
+			--define "version $(VERSION)" \
+			--define "build_number $(BUILD_NUMBER)" \
+			storm.spec
 
 $(SOURCE):
         @spectool \
-                        --define "name $(NAME)" \
-                        --define "version $(VERSION)" \
-                        -g storm.spec
+			--define "name $(NAME)" \
+			--define "version $(VERSION)" \
+			-g storm.spec
 
 clean:
         @rm -rf $(TOPDIR) x86_64
