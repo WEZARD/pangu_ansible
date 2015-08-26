@@ -7,7 +7,7 @@ TOPDIR = /tmp/zookeeper-rpm
 PWD = $(shell pwd)
 
 rpm: $(SOURCE)
-        @rpmbuild -v -bb \
+	@rpmbuild -v -bb \
 			--define "_sourcedir $(PWD)" \
 			--define "_rpmdir $(PWD)" \
 			--define "_topdir $(TOPDIR)" \
@@ -16,10 +16,10 @@ rpm: $(SOURCE)
 			zookeeper.spec
 
 $(SOURCE):
-        @spectool \
+	@spectool \
 			--define "version $(VERSION)" \
 			-g zookeeper.spec
 
 clean:
-        @rm -rf $(TOPDIR) x86_64
-        @rm -f $(SOURCE)
+	@rm -rf $(TOPDIR) x86_64
+	@rm -f $(SOURCE)
