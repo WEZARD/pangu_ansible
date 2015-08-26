@@ -31,7 +31,7 @@ ZooKeeper is a centralized service for maintaining configuration information, na
 %install
 
 mkdir -p $RPM_BUILD_ROOT%{_prefix}/zookeeper
-cp -r $RPM_BUILD_DIR %{_prefix}/
+cp -r $RPM_BUILD_DIR/zookeeper-3.4.6 %{_prefix}/
 rm -rf $RPM_BUILD_ROOT%{_prefix}/zookeeper
 
 %clean
