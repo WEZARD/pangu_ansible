@@ -1,11 +1,11 @@
 ---
 - name: copy storm-rpm
-  copy: src=storm-0.9.2-1.x86_64.rpm dest=/opt
+  copy: src=apache-storm-0.9.4-1.x86_64.rpm dest=/opt
 
 - name: install storm
-  yum: name=/opt/storm-0.9.2-1.x86_64.rpm state=present
+  yum: name=/opt/apache-storm-0.9.4-1.x86_64.rpm state=present
 
-- file: path=/opt/storm-0.9.2/data state=directory mode="u=rwx,g=rx,o=rx"
+- file: path=/opt/apache-storm-0.9.4/data state=directory mode="u=rwx,g=rx,o=rx"
 
 - name: add hostname
         lineinfile: dest=/etc/hosts
@@ -18,7 +18,7 @@
 
 - template: >
     src=storm.yaml.j2
-    dest=/opt/storm-0.9.2/conf/storm.yaml
+    dest=/opt/apache-storm-0.9.4/conf/storm.yaml
     mode=644
     owner=root
   notify: Restart storm
