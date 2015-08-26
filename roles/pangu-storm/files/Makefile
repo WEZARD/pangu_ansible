@@ -8,7 +8,7 @@ TOPDIR = /tmp/storm-rpm
 PWD = $(shell pwd)
 
 rpm: $(SOURCE)
-        @rpmbuild -v -bb \
+	@rpmbuild -v -bb \
 			--define "_sourcedir $(PWD)" \
 			--define "_rpmdir $(PWD)" \
 			--define "_topdir $(TOPDIR)" \
@@ -18,11 +18,11 @@ rpm: $(SOURCE)
 			storm.spec
 
 $(SOURCE):
-        @spectool \
+	@spectool \
 			--define "name $(NAME)" \
 			--define "version $(VERSION)" \
 			-g storm.spec
 
 clean:
-        @rm -rf $(TOPDIR) x86_64
-        @rm -f $(SOURCE)
+	@rm -rf $(TOPDIR) x86_64
+	@rm -f $(SOURCE)
