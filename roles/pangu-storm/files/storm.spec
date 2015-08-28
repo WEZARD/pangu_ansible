@@ -32,7 +32,7 @@ Storm has many use cases: realtime analytics, online machine learning, continuou
 %install
 
 mkdir -p $RPM_BUILD_ROOT%{_prefix}/storm
-cp -r $RPM_BUILD_DIR/apache-storm-0.9.4 %{_prefix}/
+cp -r $RPM_BUILD_DIR/apache-storm-0.9.4 $RPM_BUILD_ROOT%{_prefix}/
 rm -rf $RPM_BUILD_ROOT%{_prefix}/storm
 
 %clean
