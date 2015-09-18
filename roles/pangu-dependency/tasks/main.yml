@@ -5,12 +5,6 @@
 - name: install libpcap
   yum: name=libpcap state=present
 
-- name: copy jpcap
-  copy: src=jpcap-0.7-1.x86_64.rpm dest=/opt
-
-- name: install jpcap
-  yum: name=/opt/jpcap-0.7-1.x86_64.rpm state=present
-
 - name: install the EPEL repository
   yum: name=epel-release state=present
 
